@@ -9,6 +9,7 @@ export default class App {
         this.header();
         this.questions();
         this.arrow();
+        this.cursor();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -71,6 +72,18 @@ export default class App {
             const scrollTop = window.scrollY;
             gsap.to(arrow, { duration: 0.5, y: scrollTop });
         });
+    }
+
+    static cursor() {
+        const cursor = document.querySelector(".circle-cursor");
+        function moveCursor(e) {
+            gsap.to(cursor, {
+                duration: 0.5,
+                x: e.clientX,
+                y: e.clientY
+            });
+        }
+        document.addEventListener("mousemove", moveCursor);
     }
 }
 App.init();

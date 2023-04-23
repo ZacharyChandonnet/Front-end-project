@@ -96,6 +96,16 @@ header .conteneur .formulaire .btn {
   }
 }
 @media screen and (min-width: 1200px) {
+  .circle-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(185, 172, 150, 0.337254902);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+  }
   header {
     display: inherit;
     justify-content: inherit;

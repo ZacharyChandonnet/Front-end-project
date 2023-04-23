@@ -6,8 +6,9 @@ export default class App {
      * Méthode principale. Sera appelée après le chargement de la page.
      */
     static main() {
-      this.title();
-      this.from();
+        this.title();
+        this.from();
+        this.cursor();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -19,8 +20,8 @@ export default class App {
         });
     }
 
-    static title(){
-        gsap.from('.title',{
+    static title() {
+        gsap.from('.title', {
             duration: 2,
             opacity: 0,
             y: -100,
@@ -28,7 +29,7 @@ export default class App {
         });
     }
 
-    static from(){
+    static from() {
         gsap.from('.form', {
             delay: 1.5,
             duration: 2,
@@ -37,7 +38,18 @@ export default class App {
             ease: "power4.easeIn",
         })
     }
-    
-  
+
+    static cursor() {
+        const cursor = document.querySelector(".circle-cursor");
+        function moveCursor(e) {
+            gsap.to(cursor, {
+                duration: 0.5,
+                x: e.clientX,
+                y: e.clientY
+            });
+        }
+        document.addEventListener("mousemove", moveCursor);
+    }
+
 }
 App.init();

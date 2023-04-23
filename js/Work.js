@@ -9,6 +9,7 @@ export default class App {
 
         this.workTitle();
         this.container();
+        this.cursor();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -46,6 +47,17 @@ export default class App {
             stagger: 0.7 // Change this value to adjust the delay between each section
         });
     }
-    
+
+    static cursor() {
+        const cursor = document.querySelector(".circle-cursor");
+        function moveCursor(e) {
+            gsap.to(cursor, {
+                duration: 0.5,
+                x: e.clientX,
+                y: e.clientY
+            });
+        }
+        document.addEventListener("mousemove", moveCursor);
+    }
 }
 App.init();
