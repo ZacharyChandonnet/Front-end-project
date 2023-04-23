@@ -1,5 +1,6 @@
 # Front-end-project
-This is my first front end personnal project. Full responsive using #HTML CSS GSAP AND JS
+This is my first front end personnal project. Full responsive using 
+#HTML CSS GSAP AND JS
 
  It's a one pager but with a "Work with us", "FAQ" and a "Reservation" page that is available from the footer.
 
