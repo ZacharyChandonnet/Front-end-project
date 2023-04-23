@@ -10,6 +10,19 @@ html {
 }
 
 header {
+  a {
+    text-decoration: none;
+    color: var(--color-one);
+    margin-top: 15px;
+    display: block;
+    margin-left: 10px;
+    background-color: var(--color-main);
+    width: 50vw;
+    height: 20px;
+    padding: 5px;
+    font-size: 18px;
+  }
+
   h1,
   h2,
   h3,
@@ -110,12 +123,17 @@ main {
     button i.fa-minus {
       display: none;
     }
+
+    .arrow {
+      display: none;
+    }
   }
 }
 
 @media screen and (min-width: 768px) {
   main {
     .question {
+      position: relative;
       .question-header {
         justify-content: center;
       }
@@ -131,11 +149,26 @@ main {
         margin: 0 auto;
         margin-top: 10px;
       }
+
+      .arrow {
+        display: inherit;
+        position: absolute;
+        font-size: 25px;
+        right: 0;
+        margin-right: 10vw;
+        margin-top: 15vw;
+      }
     }
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  header {
+    a {
+      width: 20vw;
+      font-size: 22px;
+    }
+  }
   main {
     .question {
       .question-header {
@@ -152,6 +185,12 @@ main {
         width: 20vw;
         margin: 0 auto;
         margin-top: 10px;
+      }
+
+      .arrow {
+        margin-top: 1vw;
+        margin-right: 10vw;
+        font-size: 40px;
       }
     }
   }

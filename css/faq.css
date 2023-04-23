@@ -8,6 +8,18 @@ html {
   --color-gold: #b9ac96;
 }
 
+header a {
+  text-decoration: none;
+  color: var(--color-one);
+  margin-top: 15px;
+  display: block;
+  margin-left: 10px;
+  background-color: var(--color-main);
+  width: 50vw;
+  height: 20px;
+  padding: 5px;
+  font-size: 18px;
+}
 header h1,
 header h2,
 header h3,
@@ -97,8 +109,14 @@ main .question.show button i.fa-minus {
 main .question button i.fa-minus {
   display: none;
 }
+main .question .arrow {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
+  main .question {
+    position: relative;
+  }
   main .question .question-header {
     justify-content: center;
   }
@@ -113,8 +131,20 @@ main .question button i.fa-minus {
     margin: 0 auto;
     margin-top: 10px;
   }
+  main .question .arrow {
+    display: inherit;
+    position: absolute;
+    font-size: 25px;
+    right: 0;
+    margin-right: 10vw;
+    margin-top: 15vw;
+  }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
+  header a {
+    width: 20vw;
+    font-size: 22px;
+  }
   main .question .question-header {
     justify-content: center;
   }
@@ -128,5 +158,10 @@ main .question button i.fa-minus {
     width: 20vw;
     margin: 0 auto;
     margin-top: 10px;
+  }
+  main .question .arrow {
+    margin-top: 1vw;
+    margin-right: 10vw;
+    font-size: 40px;
   }
 }/*# sourceMappingURL=faq.css.map */

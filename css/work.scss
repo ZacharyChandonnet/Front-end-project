@@ -10,6 +10,21 @@ html {
 }
 
 header {
+  a {
+    position: absolute;
+    text-decoration: none;
+    color: var(--color-main);
+    margin-top: 15px;
+    display: block;
+    margin-left: 10px;
+    background-color: var(--color-one);
+    width: 50vw;
+    height: 20px;
+    padding: 5px;
+    font-size: 18px;
+    z-index: 1;
+  }
+  position: relative;
   background-image: url(/img/work.jpg);
   background-position: center;
   background-size: cover;
@@ -92,6 +107,9 @@ header {
 
 @media screen and (min-width: 1200px) {
   header {
+    a{
+      width: 20vw;
+    }
     .twork {
         padding-top: 30vh;
         font-size: 32px;

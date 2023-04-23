@@ -10,6 +10,7 @@ export default class App {
         this.nav();
         this.SlideShow();
         this.menuHamburger();
+        this.cursor();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -78,6 +79,18 @@ export default class App {
         menuHamburger.addEventListener('click', () => {
             navLinks.classList.toggle('mobile-menu')
         })
+    }
+
+    static cursor() {
+        const cursor = document.querySelector(".circle-cursor");
+        function moveCursor(e) {
+            gsap.to(cursor, {
+                duration: 0.5,
+                x: e.clientX,
+                y: e.clientY
+            });
+        }
+        document.addEventListener("mousemove", moveCursor);
     }
 }
 App.init();

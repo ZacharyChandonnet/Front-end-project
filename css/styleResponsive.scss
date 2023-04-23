@@ -229,8 +229,8 @@ main {
           width: 100%;
           object-fit: cover;
         }
-        .hover-card{
-         opacity: 0;
+        .hover-card {
+          opacity: 0;
         }
       }
     }
@@ -362,6 +362,16 @@ footer {
 // DESKTOP
 
 @media screen and (min-width: 1200px) {
+  .circle-cursor {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #b9ac9656;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+  }
   header {
     position: relative;
     .mainTitle {
@@ -663,10 +673,10 @@ footer {
         transition: transform 0.5s ease-in-out;
       }
 
-      .grid-item{
-        .hover-card{
-        opacity: 1;
-        transition: 1s;
+      .grid-item {
+        .hover-card {
+          opacity: 1;
+          transition: 1s;
         }
       }
 

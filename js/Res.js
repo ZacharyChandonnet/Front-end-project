@@ -7,6 +7,7 @@ export default class App {
      */
     static main() {
       this.title();
+      this.from();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -20,12 +21,23 @@ export default class App {
 
     static title(){
         gsap.from('.title',{
-            duration: 1.2,
+            duration: 2,
             opacity: 0,
-            x: -500,
+            y: -100,
             ease: "power4.easeIn",
         });
     }
+
+    static from(){
+        gsap.from('.form', {
+            delay: 1.5,
+            duration: 2,
+            opacity: 0,
+            y: -50,
+            ease: "power4.easeIn",
+        })
+    }
+    
   
 }
 App.init();

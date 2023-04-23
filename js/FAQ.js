@@ -8,6 +8,7 @@ export default class App {
     static main() {
         this.header();
         this.questions();
+        this.arrow();
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -61,6 +62,14 @@ export default class App {
                     });
                 }
             });
+        });
+    }
+
+    static arrow() {
+        const arrow = document.querySelector('.arrow');
+        window.addEventListener('scroll', function () {
+            const scrollTop = window.scrollY;
+            gsap.to(arrow, { duration: 0.5, y: scrollTop });
         });
     }
 }
