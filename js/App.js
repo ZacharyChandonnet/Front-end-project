@@ -11,6 +11,8 @@ export default class App {
         this.SlideShow();
         this.menuHamburger();
         this.cursor();
+        this.scroll();
+
     }
     /**
      * Méthode qui permet d'attendre le chargement de la page avant d'éxécuter le script principal
@@ -91,6 +93,18 @@ export default class App {
             });
         }
         document.addEventListener("mousemove", moveCursor);
+    }
+
+    static scroll() {
+        document.querySelectorAll('a[data-scroll]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
     }
 }
 App.init();
